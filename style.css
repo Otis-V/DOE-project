@@ -29,6 +29,10 @@ body {
   line-height: 1.65;
 }
 
+body.is-ready {
+  overflow-x: hidden;
+}
+
 h1,
 h2,
 h3 {
@@ -70,6 +74,7 @@ a {
   backdrop-filter: blur(8px);
   background: rgba(248, 251, 248, 0.9);
   border-bottom: 1px solid var(--line);
+  animation: slideDown 0.7s ease-out both;
 }
 
 .nav-wrap {
@@ -123,6 +128,38 @@ a {
 .nav-list a:hover,
 .nav-list a.active {
   background: #dce7dc;
+}
+
+[data-animate] {
+  --delay: 0s;
+  opacity: 0;
+  transform: translate3d(0, 36px, 0) scale(0.98);
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--delay);
+  will-change: opacity, transform;
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+[data-animate="fade-up"] {
+  transform: translate3d(0, 42px, 0);
+}
+
+[data-animate="fade-left"] {
+  transform: translate3d(42px, 0, 0);
+}
+
+[data-animate="fade-right"] {
+  transform: translate3d(-42px, 0, 0);
+}
+
+[data-animate="zoom-in"] {
+  transform: translate3d(0, 24px, 0) scale(0.92);
 }
 
 .hero-grid {
@@ -213,6 +250,8 @@ a {
 .focus-card:hover {
   border-color: #97ad98;
   background: #f3f8f3;
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(35, 54, 43, 0.12);
 }
 
 .focus-index {
@@ -382,6 +421,37 @@ a {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  [data-animate] {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (max-width: 1024px) {

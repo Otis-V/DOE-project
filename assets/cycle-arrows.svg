@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true">
+  <defs>
+    <marker
+      id="arrowHead"
+      markerWidth="7"
+      markerHeight="7"
+      refX="6.2"
+      refY="3.5"
+      orient="auto"
+      markerUnits="userSpaceOnUse"
+    >
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#3f624d" />
+    </marker>
+  </defs>
+
+  <!-- Boven -> rechts onder -->
+  <path
+    d="M55 14 C71 19 81 31 82 47"
+    fill="none"
+    stroke="#3f624d"
+    stroke-width="2.2"
+    stroke-linecap="butt"
+    marker-end="url(#arrowHead)"
+  />
+
+  <!-- Rechts onder -> links onder -->
+  <path
+    d="M77 70 C63 81 40 82 23 73"
+    fill="none"
+    stroke="#3f624d"
+    stroke-width="2.2"
+    stroke-linecap="butt"
+    marker-end="url(#arrowHead)"
+  />
+
+  <!-- Links onder -> boven -->
+  <path
+    d="M18 61 C14 40 20 26 35 14"
+    fill="none"
+    stroke="#3f624d"
+    stroke-width="2.2"
+    stroke-linecap="butt"
+    marker-end="url(#arrowHead)"
+  />
+</svg>

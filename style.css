@@ -450,6 +450,10 @@ a {
   margin-bottom: 0;
 }
 
+.impact-card .image-source {
+  margin-top: 0.7rem;
+}
+
 .impact-tag,
 .stat-label {
   display: inline-flex;

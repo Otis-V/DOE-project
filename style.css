@@ -250,6 +250,12 @@ a {
   margin-bottom: 1rem;
 }
 
+.split-explainer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
 .focus-matrix {
   margin: 1rem auto 0;
   max-width: 1040px;
@@ -511,6 +517,24 @@ a {
   align-items: stretch;
 }
 
+.graph-layout {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.graph-text,
+.graph-panel {
+  min-width: 0;
+}
+
+.graph-panel {
+  display: grid;
+  gap: 0.6rem;
+}
+
 .case-row {
   grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
   gap: 1.15rem;
@@ -624,11 +648,16 @@ a {
   }
 
   .impact-grid,
-  .stats-grid {
+  .stats-grid,
+  .split-explainer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .ethics-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .graph-layout {
     grid-template-columns: 1fr;
   }
 
@@ -663,7 +692,8 @@ a {
 
   .impact-grid,
   .stats-grid,
-  .ethics-points {
+  .ethics-points,
+  .split-explainer {
     grid-template-columns: 1fr;
   }
 

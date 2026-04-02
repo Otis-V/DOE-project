@@ -211,20 +211,6 @@ a {
   gap: 0.7rem;
 }
 
-.hero-inline-figure {
-  margin-top: 1.2rem;
-  max-width: 320px;
-  justify-self: center;
-  transform: translateY(28px);
-}
-
-.hero-inline-figure .section-image {
-  width: 100%;
-  max-height: 220px;
-  object-fit: contain;
-  background: #f7faf6;
-}
-
 .btn {
   text-decoration: none;
   border-radius: 12px;
@@ -376,7 +362,11 @@ a {
 }
 
 .step {
-  padding: 0.2rem 0;
+  border: 1px solid #cfdbcf;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #fbfdfb 0%, #eff5ef 100%);
+  box-shadow: 0 10px 24px rgba(23, 38, 29, 0.06);
+  padding: 1.05rem;
 }
 
 .step-title {
@@ -384,6 +374,11 @@ a {
   padding: 0;
   min-height: 0;
   font-size: 1.08rem;
+}
+
+.step-content {
+  display: grid;
+  gap: 0.7rem;
 }
 
 .production-steps .editable {
@@ -414,25 +409,10 @@ a {
   min-width: 0;
 }
 
-.step-text-panel {
-  border: 1px solid #c2d0c2;
-  border-radius: 20px;
-  background: linear-gradient(145deg, #f9fcf9 0%, #eff5ef 100%);
-  box-shadow: 0 8px 18px rgba(35, 54, 43, 0.08);
-  padding: 1.05rem;
-}
-
-.step-text-col {
-  padding-right: 0.2rem;
-}
-
 .step-image-col {
   display: grid;
   gap: 0.45rem;
   justify-items: center;
-  align-content: start;
-  margin: 0;
-  padding: 0.15rem 0 0;
 }
 
 .step-image-col .image-placeholder {
@@ -456,8 +436,12 @@ a {
   background: #eef4ee;
 }
 
-.step-image-col .image-source {
-  text-align: center;
+.step-content > .step-image-col {
+  margin-top: 0.1rem;
+}
+
+.step-content > .step-image-col .step-image {
+  max-height: 160px;
 }
 
 .production-page .media-col {
@@ -518,18 +502,18 @@ a {
 }
 
 .step-media-col .section-image.small {
-  max-width: 360px;
-  min-height: 200px;
+  max-width: 150px;
+  min-height: 100px;
 }
 
 .step-media-col .section-image.medium {
-  max-width: 480px;
-  min-height: 260px;
+  max-width: 200px;
+  min-height: 130px;
 }
 
 .step-media-col .section-image.large {
-  max-width: 760px;
-  min-height: 440px;
+  max-width: 300px;
+  min-height: 180px;
 }
 
 .step-caption {
@@ -683,8 +667,7 @@ a {
 .stat-card h3,
 .mini-card h3,
 .info-block h3 {
-  margin-bottom: 0.4rem;
-}
+  margin-bottom: 0.4rem;  text-align: center;}
 
 .impact-card p,
 .stat-card p,
@@ -814,6 +797,47 @@ a {
   gap: 0.45rem;
   align-content: stretch;
   height: 100%;
+}
+
+.placeholder-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.placeholder-row .info-block p {
+  text-align: center;
+}
+
+.process-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.process-sidebar {
+  min-width: 0;
+}
+
+.process-main {
+  min-width: 0;
+}
+
+.additional-content {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.content-item h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+}
+
+.content-item p {
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .case-text {

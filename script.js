@@ -1,4 +1,4 @@
-// Toggle "terug naar boven" knop op basis van scrollpositie.
+﻿// Toggle "terug naar boven" knop op basis van scrollpositie.
 const backToTopButton = document.getElementById("backToTop");
 const animatedElements = document.querySelectorAll("[data-animate]");
 
@@ -46,48 +46,56 @@ if (backToTopButton) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
+
 // Proces stepper - 7 stappen
 const processSteps = [
   {
     title: "Stap 1: Sorteren en separatie",
-    description: "De capacitoren moeten van de PWb's worden verwijderd, vanwege het feit dat ze zeer klein zijn gebeurt dit automatisch. Hierbij wordt met 2D en 3D camera's gescand naar visuele eigenschappen zoals de kleur, vorm... Eens de componenten gevonden zijn worden ze verwijderd via bijvoorbeeld een LASER. Dit proces heeft een efficiëntie van 93.6%, de foutmarge is grotendeels afkomstig van schade of wanneer het zicht geblokkeerd wordt door andere componenten.",
+    description:
+      "De condensatoren moeten van de PWB's worden verwijderd. Omdat ze zeer klein zijn, gebeurt dit automatisch. Hierbij wordt met 2D- en 3D-camera's gescand naar visuele eigenschappen zoals kleur en vorm. Eens de componenten gevonden zijn, worden ze verwijderd via bijvoorbeeld een laser. Dit proces heeft een efficiëntie van 93,6%. De foutmarge is grotendeels afkomstig van schade of van situaties waarin het zicht geblokkeerd wordt door andere componenten.",
     image: "assets/capacitoren op PMB.jpg",
-    caption: "Herkenning van gele en zwarte condensatoren op een PMB"
+    caption: "Herkenning van gele en zwarte condensatoren op een PWB",
   },
   {
     title: "Stap 2: Mechanische behandeling",
-    description: "De tantalum heeft een behuizing van epoxyhars en silica-vulsel die verwijdert moet worden, dit kan gedaan worden via vermaling via een disk-mill. Dit zorgde voor een 0.1 wt% tantalum in de fijne of gemalen fractie, wat betekent dat de tantalum kern grotendeels intact bleef. Ook was de behuizing voor het grootste deel verwijderd. De kwaliteit van deze stap is cruciaal voor de efficiëntie van verdere stappen.",
+    description:
+      "Het tantalum heeft een behuizing van epoxyhars en silica-vulsel die verwijderd moet worden. Dit kan gebeuren via vermaling met een disk mill. Dit zorgde voor 0,1 wt% tantalum in de fijne of gemalen fractie, wat betekent dat de tantalumkern grotendeels intact bleef. Ook was de behuizing voor het grootste deel verwijderd. De kwaliteit van deze stap is cruciaal voor de efficiëntie van de verdere stappen.",
     image: "assets/mechanical.jpg",
-    caption: "kernen, behuizing en fijne fractie"
+    caption: "Kernen, behuizing en fijne fractie",
   },
   {
     title: "Stap 3: Magnetische separatie",
-    description: "Elektrische contacten gemaakt uit een nikkel-ijzerlegering worden hier magnetisch verwijderd. In het geval dat er nog veel legering aan de kern blijft zal deze ook weggesorteerd worden wat voor verlies zorgt. In het geval van dit onderzoek kan van 3 tot 15 wt% tantalum verloren gaan, wat leidt tot een efficiëntie van 85% voor deze stap.",
+    description:
+      "Elektrische contacten, gemaakt uit een nikkel-ijzerlegering, worden hier magnetisch verwijderd. Als er nog veel legering aan de kern blijft hangen, zal die ook weggesorteerd worden, wat voor verlies zorgt. In het geval van dit onderzoek kan 3 tot 15 wt% tantalum verloren gaan, wat leidt tot een efficiëntie van 85% voor deze stap.",
     image: "assets/magnetic.png",
-    caption: "voorbeeld magnetische separatie"
+    caption: "Voorbeeld van magnetische separatie",
   },
   {
     title: "Stap 4: Densiteitseparatie",
-    description: "Hier wordt het tantalum nog meer gezuiverd door het te splitsen in een lichte en zware fractie. De lichte fractie bevat 90wt% epoxyhars en nikkel-ijzerlegering en 10 wt% andere metalen. Binnen de zware fractie is er slechts 28.5 wt% behuizing. Deze stap heeft een efficiëntie van 98% voor tantalum, dus er wordt hier weinig verlies gemaakt.",
+    description:
+      "Hier wordt het tantalum verder gezuiverd door het te splitsen in een lichte en zware fractie. De lichte fractie bevat 90 wt% epoxyhars en nikkel-ijzerlegering en 10 wt% andere metalen. Binnen de zware fractie is er slechts 28,5 wt% behuizing. Deze stap heeft een efficiëntie van 98% voor tantalum, dus er wordt hier weinig verlies gemaakt.",
     image: "assets/separating-funnel.gif",
-    caption: "voorbeeld densiteitseparatie"
+    caption: "Voorbeeld van densiteitseparatie",
   },
   {
     title: "Stap 5: Elektrochemische behandeling",
-    description: "Dit is een 3-stappen proces waarin onzuiverheden worden verwijderd via elektrochemische reacties (reducties en oxidaties) met een elektrolyt. In de eerste stap wordt mangaandioxide gereduceerd met als doel om deze te verwijderen door in oplossing te gaan. Hierna vindt er een oxidatie plaats van koper, zilver, ijzer en zink, waarbij een neerslag van AgCl ontstaat en er een afzetting van koper op de kathode vormt, en lossen de ijzer en zink op in de oplossing.Het nikkel kan nog verwijderd worden door een oxidatiereactie in een licht basisch elektrolyt waarbij er een nikkelhydroxide neerslag ontstaat.",
+    description:
+      "Dit is een proces in drie stappen waarin onzuiverheden worden verwijderd via elektrochemische reacties, namelijk reducties en oxidaties, met een elektrolyt. In de eerste stap wordt mangaandioxide gereduceerd met als doel het te verwijderen door het in oplossing te brengen. Hierna vindt er een oxidatie plaats van koper, zilver, ijzer en zink, waarbij een neerslag van AgCl ontstaat en er een afzetting van koper op de kathode vormt. IJzer en zink lossen daarbij op in de oplossing. Het nikkel kan daarna nog verwijderd worden door een oxidatiereactie in een licht basisch elektrolyt, waarbij een nikkelhydroxideneerslag ontstaat.",
     image: "assets/elektrochemical.jpg",
-    caption: "2-cell opbouw met drum elektrode"
+    caption: "2-cell-opbouw met drumelektrode",
   },
   {
     title: "Stap 6: Thermische behandeling",
-    description: "Nu resteren er nog alleen grafiet en Epoxy. Bij een verhoogde temperatuur van 540 °C gebeurt er een verbrandingsreactie van deze onzuiverheden, waardoor deze reageren en verdwijnen uit de kern in de vorm van onder andere CO2. Door de reactie wordt het eindproduct, tantalumpentoxide, gevormd met een zuiverheidsgraad van net geen 99.6%",
+    description:
+      "Nu resteren alleen nog grafiet en epoxy. Bij een verhoogde temperatuur van 540 °C gebeurt er een verbrandingsreactie van deze onzuiverheden, waardoor ze reageren en uit de kern verdwijnen in de vorm van onder andere CO2. Door deze reactie wordt het eindproduct, tantalumpentoxide, gevormd met een zuiverheidsgraad van net geen 99,6%.",
   },
   {
-    title: "extra stap: Distillatie van het elektrolyt",
-    description: "Bij deze stap wordt het elektrolyt gedestilleerd. Hierbij is het doel om een geconcentreerd zuur te verkrijgen. Metaalzouten worden hierbij als een bijproduct gevormd, voornamelijk zink-nikkel-chloride. Het totale verlies van de elektrolyt per cyclus wordt geschat op 5%.",
+    title: "Extra stap: Distillatie van het elektrolyt",
+    description:
+      "Bij deze stap wordt het elektrolyt gedestilleerd. Het doel is om een geconcentreerd zuur te verkrijgen. Metaalzouten worden hierbij als bijproduct gevormd, voornamelijk zink-nikkelchloride. Het totale verlies van het elektrolyt per cyclus wordt geschat op 5%.",
     image: "assets/distillatie.webp",
-    caption: "voorbeeld destillatieopstelling"
-  }
+    caption: "Voorbeeld van een destillatieopstelling",
+  },
 ];
 
 let currentStepIndex = 0;
@@ -114,7 +122,6 @@ function updateStep() {
     stepCaption.style.display = "block";
     stepDisplay.classList.remove("no-image");
 
-    // Alle stappen: afbeelding naast tekst (rechts)
     if (stepContentRow) {
       stepContentRow.classList.remove("stacked");
     }
@@ -160,3 +167,5 @@ nextBtn?.addEventListener("click", () => {
 
 // Initialize
 updateStep();
+
+

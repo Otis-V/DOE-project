@@ -327,6 +327,132 @@ a {
   box-shadow: none;
 }
 
+.section-title-with-image {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.title-text {
+  min-width: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.header-figure {
+  align-self: start;
+  justify-items: end;
+}
+
+.production-page .header-figure .section-image {
+  width: min(100%, 430px);
+  max-height: 250px;
+  min-height: 0;
+  object-fit: contain;
+  margin-left: auto;
+}
+
+.production-steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.step {
+  border: 1px solid #cfdbcf;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #fbfdfb 0%, #eff5ef 100%);
+  box-shadow: 0 10px 24px rgba(23, 38, 29, 0.06);
+  padding: 1.05rem;
+}
+
+.step-title {
+  margin-bottom: 0.65rem;
+  padding: 0;
+  min-height: 0;
+  font-size: 1.08rem;
+}
+
+.step-content {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.production-steps .editable {
+  padding: 0;
+  min-height: 0;
+}
+
+.production-page .tall-editable {
+  padding: 0;
+  min-height: 0;
+}
+
+.production-intro {
+  margin: 0;
+  max-width: 70ch;
+  color: var(--muted);
+}
+
+.step-flex {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.step-text-col,
+.step-image-col {
+  min-width: 0;
+}
+
+.step-image-col {
+  display: grid;
+  gap: 0.45rem;
+  justify-items: center;
+}
+
+.step-image-col .image-placeholder {
+  width: 100%;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  place-items: center;
+}
+
+.step-image {
+  width: min(100%, 320px);
+  height: auto;
+  max-height: 160px;
+  min-height: 0;
+  display: block;
+  object-fit: contain;
+  border-radius: 14px;
+  border: 1px solid #afbfad;
+  background: #eef4ee;
+}
+
+.step-content > .step-image-col {
+  margin-top: 0.1rem;
+}
+
+.step-content > .step-image-col .step-image {
+  max-height: 160px;
+}
+
+.production-page .media-col {
+  justify-items: center;
+}
+
+.production-page .media-col .step-image {
+  width: min(100%, 300px);
+  max-height: 180px;
+}
+
 .info-block {
   padding: 1.1rem 1.15rem;
   border: 1px solid #d4ddd3;
@@ -673,6 +799,11 @@ a {
 
 @media (max-width: 1024px) {
   .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title-with-image,
+  .step-flex {
     grid-template-columns: 1fr;
   }
 

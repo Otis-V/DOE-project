@@ -211,6 +211,20 @@ a {
   gap: 0.7rem;
 }
 
+.hero-inline-figure {
+  margin-top: 1.2rem;
+  max-width: 320px;
+  justify-self: center;
+  transform: translateY(28px);
+}
+
+.hero-inline-figure .section-image {
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  background: #f7faf6;
+}
+
 .btn {
   text-decoration: none;
   border-radius: 12px;
@@ -362,11 +376,7 @@ a {
 }
 
 .step {
-  border: 1px solid #cfdbcf;
-  border-radius: 20px;
-  background: linear-gradient(145deg, #fbfdfb 0%, #eff5ef 100%);
-  box-shadow: 0 10px 24px rgba(23, 38, 29, 0.06);
-  padding: 1.05rem;
+  padding: 0.2rem 0;
 }
 
 .step-title {
@@ -374,11 +384,6 @@ a {
   padding: 0;
   min-height: 0;
   font-size: 1.08rem;
-}
-
-.step-content {
-  display: grid;
-  gap: 0.7rem;
 }
 
 .production-steps .editable {
@@ -409,10 +414,25 @@ a {
   min-width: 0;
 }
 
+.step-text-panel {
+  border: 1px solid #c2d0c2;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #f9fcf9 0%, #eff5ef 100%);
+  box-shadow: 0 8px 18px rgba(35, 54, 43, 0.08);
+  padding: 1.05rem;
+}
+
+.step-text-col {
+  padding-right: 0.2rem;
+}
+
 .step-image-col {
   display: grid;
   gap: 0.45rem;
   justify-items: center;
+  align-content: start;
+  margin: 0;
+  padding: 0.15rem 0 0;
 }
 
 .step-image-col .image-placeholder {
@@ -436,12 +456,8 @@ a {
   background: #eef4ee;
 }
 
-.step-content > .step-image-col {
-  margin-top: 0.1rem;
-}
-
-.step-content > .step-image-col .step-image {
-  max-height: 160px;
+.step-image-col .image-source {
+  text-align: center;
 }
 
 .production-page .media-col {

@@ -315,6 +315,10 @@ a {
   margin-bottom: 0.2rem;
 }
 
+.section-title {
+  margin-bottom: 0.7rem;
+}
+
 .content-card {
   background: transparent;
   border: 0;
@@ -476,19 +480,48 @@ a {
 
 .ethics-layout {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 .ethics-main {
   padding: 1.4rem;
 }
 
+.ethics-image {
+  min-height: 100%;
+}
+
 .ethics-points {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.9rem;
+  align-content: start;
+}
+
+.ethics-points-left,
+.ethics-points-right {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ethics-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-items: center;
+}
+
+.ethics-gallery .image-figure {
+  width: 72%;
+  justify-self: center;
+}
+
+.ethics-gallery-image {
+  width: 100%;
+  height: auto;
+  min-height: 0;
 }
 
 .mini-card {
@@ -538,12 +571,15 @@ a {
 .case-row {
   grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
   gap: 1.15rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 .case-media {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
   gap: 0.45rem;
-  align-content: start;
+  align-content: stretch;
+  height: 100%;
 }
 
 .case-text {
@@ -551,7 +587,8 @@ a {
 }
 
 .case-image {
-  min-height: 220px;
+  min-height: 0;
+  height: 100%;
 }
 
 .chart-placeholder {
@@ -693,6 +730,9 @@ a {
   .impact-grid,
   .stats-grid,
   .ethics-points,
+  .ethics-points-left,
+  .ethics-points-right,
+  .ethics-gallery,
   .split-explainer {
     grid-template-columns: 1fr;
   }

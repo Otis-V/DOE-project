@@ -386,11 +386,7 @@ a {
 }
 
 .step {
-  border: 1px solid #cfdbcf;
-  border-radius: 20px;
-  background: linear-gradient(145deg, #fbfdfb 0%, #eff5ef 100%);
-  box-shadow: 0 10px 24px rgba(23, 38, 29, 0.06);
-  padding: 1.05rem;
+  padding: 0.2rem 0;
 }
 
 .step-title {
@@ -433,10 +429,21 @@ a {
   min-width: 0;
 }
 
+.step-text-panel {
+  border: 1px solid #c2d0c2;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #f9fcf9 0%, #eff5ef 100%);
+  box-shadow: 0 8px 18px rgba(35, 54, 43, 0.08);
+  padding: 1.05rem;
+}
+
 .step-image-col {
   display: grid;
   gap: 0.45rem;
   justify-items: center;
+  align-content: start;
+  margin: 0;
+  padding-top: 0.15rem;
 }
 
 .step-image-col .image-placeholder {
@@ -458,14 +465,6 @@ a {
   border-radius: 14px;
   border: 1px solid #afbfad;
   background: #eef4ee;
-}
-
-.step-content > .step-image-col {
-  margin-top: 0.1rem;
-}
-
-.step-content > .step-image-col .step-image {
-  max-height: 160px;
 }
 
 .production-page .media-col {

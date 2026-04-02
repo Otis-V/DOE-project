@@ -39,28 +39,61 @@
             <p data-animate="fade-up" style="--delay: 0.1s">Terugwinning, beperkingen en verliezen aan het einde van de keten.</p>
           </header>
           <div class="content-card">
-            <div class="content-row">
-              <div class="text-col">
-                <p class="editable tall-editable" data-animate="fade-right">
-                  Voeg hier je doorlopende tekst toe over recyclage,
-                  terugwinningsgraad, economische haalbaarheid en resterend
-                  materiaalverlies.
-                </p>
-                <p class="editable tall-editable" data-animate="fade-right" style="--delay: 0.12s">
-                  Voeg hier je kritische evaluatie toe met voorstellen voor
-                  verbetering.
-                </p>
-              </div>
-              <div class="media-col">
-                <div class="image-placeholder right-image" data-animate="zoom-in">
-                  <span>Voeg hier afbeelding toe (recyclageproces)</span>
+            <div class="content-grid">
+              <article class="content-item" data-animate="fade-right">
+                <h2>1. Waarom recyclage?</h2>
+                <p>Tantalum speelt een grote rol in Printed Wiring Boards (PWB's), meer specifiek de tantalum capacitoren die hierin zitten. Zelfs als je het globale doel van een circulaire economie negeert zijn er vele redenen om deze te recycleren. Ten eerste wordt Tantalum al sinds 2011 door de EU erkend als kritisch rauw materiaal, daarnaast is het ook een conflictmateriaal. Tantalum heeft meerdere aantrekkelijke eigenschappen die onvervangbaar zijn, waardoor de nood aan recyclage over de jaren zal groeien naargelang de grondstof schaarster wordt.</p>
+              </article>
+              <article class="content-item" data-animate="fade-right" style="--delay: 0.08s">
+                <h2>2. Het proces</h2>
+                <p>Aangezien de recyclage momenteel zeer beperkt is (minder dan 1 wt% van de post-consumenten Tantalum) zijn de meeste recyclageprocessen niet in gebruik maar eerder onderzoek, hieronder wordt één zo'n mogelijk proces beschreven zoals gedaan in een 2023 onderzoek (<a href="https://www.sciencedirect.com/science/article/pii/S0921344925005944" target="_blank">Choi et al., 2023</a>).</p>
+                
+                <div class="process-stepper-container" data-animate="fade-up" style="--delay: 0.1s">
+                  <div class="step-display">
+                    <div class="step-content-row">
+                      <div class="step-text-col">
+                        <h3 id="stepTitle"></h3>
+                        <p id="stepDescription"></p>
+                      </div>
+                      <div class="step-media-col">
+                        <img id="stepImage" class="section-image small" src="" alt="" style="display: none;" />
+                        <p id="stepCaption" class="step-caption">Beschrijf hier de afbeelding voor stap</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step-controls">
+                    <button id="prevBtn" class="step-btn">◀ Vorige</button>
+                    <span id="stepCounter">Stap 1 van 7</span>
+                    <button id="nextBtn" class="step-btn">Volgende ▶</button>
+                  </div>
                 </div>
-                <p class="image-source" data-animate="fade-left" style="--delay: 0.08s">Bron: voeg hier je bron toe</p>
-                <div class="image-placeholder right-image small-gap" data-animate="zoom-in" style="--delay: 0.14s">
-                  <span>Voeg hier extra beeld toe (materiaalstromen)</span>
+              </article>
+              <article class="content-item" data-animate="fade-right" style="--delay: 0.16s">
+                <h2>3. Economische haalbaarheid</h2>
+                <p>Momenteel is dit proces voor een groot aantal redenen niet economisch haalbaar. Ten eerste ligt binnen PWB's een veel grotere focus op de edelmetalen. Dit is begrijpelijk, ze hebben een hogere, stabielere prijs en zijn ook aanwezig in grotere concentraties. Dit betekent dat het proces ten eerste geen impact mag hebben op de snelheid van de recyclage van edelmetalen, of dat de recyclage van tantalumcapacitoren zo winstgevend moet zijn dat er een incentief is om er toch in te investeren. </p>
+                <p>Om het proces economisch haalbaar te maken zijn er meerdere factoren van belang. Een prijsstijging van tantalum zou uiteraard de recyclage van tantalumcapacitoren bevorderen, dit kan door een hogere interesse of doordat tantalum schaarster wordt. Daarnaast kan een efficiënter proces ook een rol spelen, dit kan via een lager verlies van grondstoffen of via een hogere snelheid van het huidige proces. Ten slotte kan een verhoogde interesse in de circulaire economie ook een boost geven, mogelijks via initiatieven van de EU of andere gelijkaardige organisaties.</p>
+              </article>
+              <article class="content-item" data-animate="fade-right" style="--delay: 0.24s">
+                <h2>4. Het potentiaal</h2>
+                <div class="content-row">
+                  <div class="text-col">
+                    <p>Deze recyclage kan gebruik maken van het concept van "urban mining", waarbij waardevolle grondstoffen gewonnen worden uit stedelijk afval. Dit wordt nu al gedaan, en onder andere netwerkrouters worden hierin ook gebruikt, een ander voorwerp relevant voor tantalumcapacitoren recyclage zijn laptops. Deze voorwerpen worden nu al extreem veel gerecycleerd, dus moest de recyclage van tantalumcapacitoren effectief gedaan worden is er al een zeer goede framework voor de inzameling. Voor context bevat de gemiddelde server PWb 3g tantalum en de gemiddelde laptop 1g. Een middelgroot recyclagebedrijf recycleert gemiddeld 75000 laptops en 5000 servers per jaar, dit zorgt voor een potentieel voor 90kg tantalum per jaar.</p>
+                    <p>Het potentieel voor recyclage bestaat dus zeker. Moesten we nu de globale markt bekijken kunnen we zien dat er tussen de 3 en 4 kiloton tantalum gebruikt wordt, waarvan zo'n 43.6% naar capacitoren gaat. Moesten alle PWb's gerecycleerd worden zou dit dus een grote druk van de globale markt halen. Hierbij zijn uiteraard veel problemen, zoals het feit dat efficiëntie vaak tot een gemiddelde van 90% komt, en dat slechts 20% van e-waste effectief gerecycleerd wordt.</p>
+                  </div>
+                  <div class="media-col">
+                    <div style="width:600px;background:#fff;">
+                      <div style='text-align:center;position:relative;font-size:0;'>
+                        <img style='object-fit:cover;width:100%' alt='Tantalum Market: Market Share by Application, 2025' src='https://s3.mordorintelligence.com/tantalum-market/tantalum-market-Tantalum-Market-Market-Share-by-Application-2025-1767010998292.webp?embed=true'>
+                        <a target='_blank' href='https://www.mordorintelligence.com/industry-reports/tantalum-market'>
+                          <div style='position:absolute;bottom:0px;right:0px;color:white;background: rgba(0,0,0, 0.5);padding: 4px 6px;font-family:Arial;font-size:14px;'>
+                            Image Source
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <p class="image-source" data-animate="fade-left" style="--delay: 0.2s">Bron: voeg hier je bron toe</p>
-              </div>
+              </article>
             </div>
           </div>
         </section>
